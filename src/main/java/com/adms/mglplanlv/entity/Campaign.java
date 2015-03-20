@@ -31,8 +31,12 @@ public class Campaign extends BaseAuditDomain {
 	@Column(name="CAMPAIGN_NAME_COMM")
 	private String campaignNameComm;
 	
-	@Column(name="CALL_CENTER")
-	private String callCenter;
+	@Column(name="CAMPAIGN_NAME_MGL")
+	private String campaignNameMgl;
+	
+	@ManyToOne
+	@JoinColumn(name="CALL_CENTER", referencedColumnName="CALL_CENTER_ABBR")
+	private CallCenter callCenter;
 	
 	@ManyToOne
 	@JoinColumn(name = "LIST_SOURCE", referencedColumnName = "LIST_SOURCE_ABBR")
@@ -91,11 +95,11 @@ public class Campaign extends BaseAuditDomain {
 		this.campaignNameComm = campaignNameComm;
 	}
 
-	public String getCallCenter() {
+	public CallCenter getCallCenter() {
 		return callCenter;
 	}
 
-	public void setCallCenter(String callCenter) {
+	public void setCallCenter(CallCenter callCenter) {
 		this.callCenter = callCenter;
 	}
 
@@ -137,6 +141,14 @@ public class Campaign extends BaseAuditDomain {
 
 	public void setIsActive(String isActive) {
 		this.isActive = isActive;
+	}
+
+	public String getCampaignNameMgl() {
+		return campaignNameMgl;
+	}
+
+	public void setCampaignNameMgl(String campaignNameMgl) {
+		this.campaignNameMgl = campaignNameMgl;
 	}
 
 }
