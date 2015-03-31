@@ -10,15 +10,65 @@ import com.adms.common.domain.BaseDomain;
 
 @Entity
 @NamedNativeQueries({
+//	<!-- MTL Kbank -->
 	@NamedNativeQuery(
 			name = "execPlanLvValueForMtlKbankMTD",
 			query = " EXEC [dbo].[MGL_PLAN_LV_DATA_FOR_MTL_KBANK_MTD] ?, ? ",
-			resultClass = PlanLvValue.class
-			),
+			resultClass = PlanLvValue.class),
 	@NamedNativeQuery(
 			name = "execPlanLvValueForMtlKbankYTD",
 			query = " EXEC [dbo].[MGL_PLAN_LV_DATA_FOR_MTL_KBANK_YTD] ?, ? ",
-			resultClass = PlanLvValue.class)
+			resultClass = PlanLvValue.class),
+			
+//	<!-- MTL Broker -->
+	@NamedNativeQuery(
+			name = "execPlanLvValueForMTLBrokerMTD",
+			query = " EXEC [dbo].[MGL_PLAN_LV_DATA_FOR_MTL_BROKER_MTD] ?, ? ",
+			resultClass = PlanLvValue.class),
+	@NamedNativeQuery(
+			name = "execPlanLvValueForMTLBrokerYTD",
+			query = " EXEC [dbo].[MGL_PLAN_LV_DATA_FOR_MTL_BROKER_YTD] ?, ? ",
+			resultClass = PlanLvValue.class),
+			
+//	<!-- MTI KBank -->
+	@NamedNativeQuery(
+			name = "execPlanLvValueForMTIKBankMTD",
+			query = " EXEC [dbo].[MGL_PLAN_LV_DATA_FOR_MTI_KBANK_MTD] ?, ? ",
+			resultClass = PlanLvValue.class),
+	@NamedNativeQuery(
+			name = "execPlanLvValueForMTIKBankYTD",
+			query = " EXEC [dbo].[MGL_PLAN_LV_DATA_FOR_MTI_KBANK_YTD] ?, ? ",
+			resultClass = PlanLvValue.class),
+			
+//	<!-- MSIG UOB -->
+	@NamedNativeQuery(
+			name = "execPlanLvValueForMSIGUOBMTD",
+			query = " EXEC [dbo].[MGL_PLAN_LV_DATA_FOR_MSIG_UOB_MTD] ?, ? ",
+			resultClass = PlanLvValue.class),
+	@NamedNativeQuery(
+			name = "execPlanLvValueForMSIGUOBYTD",
+			query = " EXEC [dbo].[MGL_PLAN_LV_DATA_FOR_MSIG_UOB_YTD] ?, ? ",
+			resultClass = PlanLvValue.class),
+			
+//	<!-- MSIG Broker -->
+	@NamedNativeQuery(
+			name = "execPlanLvValueForMSIGBrokerMTD",
+			query = " EXEC [dbo].[MGL_PLAN_LV_DATA_FOR_MSIG_BROKER_MTD] ?, ? ",
+			resultClass = PlanLvValue.class),
+	@NamedNativeQuery(
+			name = "execPlanLvValueForMSIGBrokerYTD",
+			query = " EXEC [dbo].[MGL_PLAN_LV_DATA_FOR_MSIG_BROKER_YTD] ?, ? ",
+			resultClass = PlanLvValue.class),
+			
+//	<!-- FWD TVD -->
+	@NamedNativeQuery(
+			name = "execPlanLvValueForFWDTVDMTD",
+			query = " EXEC [dbo].[MGL_PLAN_LV_DATA_FOR_FWD_TVD_MTD] ?, ? ",
+			resultClass = PlanLvValue.class),
+	@NamedNativeQuery(
+			name = "execPlanLvValueForFWDTVDYTD",
+			query = " EXEC [dbo].[MGL_PLAN_LV_DATA_FOR_FWD_TVD_YTD] ?, ? ",
+			resultClass = PlanLvValue.class),
 })
 public class PlanLvValue extends BaseDomain {
 
