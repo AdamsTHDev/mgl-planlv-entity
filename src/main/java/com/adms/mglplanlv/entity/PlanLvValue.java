@@ -140,5 +140,12 @@ public class PlanLvValue extends BaseDomain {
 	public void setAmp(Double amp) {
 		this.amp = amp;
 	}
+
+	@Override
+	public String toString() {
+		return "PlanLvValue [product=" + product + ", planType=" + planType
+				+ ", numOfFile=" + numOfFile + ", typ=" + typ + ", amp=" + amp
+				+ "]";
+	}
 	
 }
